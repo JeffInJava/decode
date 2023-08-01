@@ -14,13 +14,6 @@ import java.util.Scanner;
 public class DemoApplication {
 
 	public static void main(String[] args) {
-		/*ConfigurableApplicationContext applicationContext = SpringApplication.run(DemoApplication.class, args);
-
-		// 获取应用程序参数
-		ApplicationArguments applicationArguments =(ApplicationArguments)applicationContext.getBean("springApplicationArguments");
-		// 获取命令行中name的配置
-		List<String> name = applicationArguments.getOptionValues("name");
-		System.out.println("-------------------------"+name);*/
 		System.out.println("请输入文件路径：");
 		Scanner scan = new Scanner(System.in);
 		String profiles = scan.nextLine();
