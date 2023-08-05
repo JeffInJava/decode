@@ -39,7 +39,7 @@ public class DemoApplication {
 			StringBuffer sbstr = new StringBuffer("");
 			while ((line = reader.readLine()) != null) {
 				//System.out.println(line + "----->" + tt.a(line));
-				sbstr.append(line + "----->" + tt.a(line)+"\n");
+				sbstr.append(line + "," + tt.a(line)+","+tt.a(line)+"\n");
 			}
 			writer.write(sbstr.toString());
 			writer.flush();
