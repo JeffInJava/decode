@@ -13,17 +13,22 @@ import java.util.Scanner;
 @SpringBootApplication
 public class DemoApplication {
 
-	public static void main(String[] args) {
-		System.out.println("请输入文件路径：");
-		Scanner scan = new Scanner(System.in);
-		String profiles = scan.nextLine();
-		String[] wls = profiles.split("\\.");
-		if(wls.length!=2){
-			System.out.println("文件路径格式不正确！");
-			return ;
+	public static void main(String[] args) throws Exception {
+
+		/*String code = "";
+		do{
+			code = scan.nextLine();
+			if(code.length()!=8){
+				System.out.println("字符："+code+"长度应为8位，请重新输入：");
+			}
+		}while(code.length()!=8);*/
+		String code = args[0];
+		if(code.length()!=8){
+			System.out.println("Error!");
+			return;
 		}
-		String writerFile = wls[0]+"_gen.txt";
-		deCodeFile(profiles,writerFile);
+		b tt = new b();
+		System.out.println(code + "," + tt.a(code)+","+tt.a(code)+"\n");
 	}
 
 	public static void deCodeFile(String fileName,String writerFile) {
