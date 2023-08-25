@@ -37,8 +37,14 @@ public class DemoApplication {
 			writer = new BufferedWriter(new FileWriter(writerFile));
 			String line = null;
 			StringBuffer sbstr = new StringBuffer("");
+			int lineNum = 0;
 			while ((line = reader.readLine()) != null) {
+				lineNum++;
 				//System.out.println(line + "----->" + tt.a(line));
+				if(line.length()!=8){
+					System.out.println("第"+lineNum+"行：["+line+"]字符长度不正确！");
+					return;
+				}
 				sbstr.append(line + "," + tt.a(line)+","+tt.a(line)+"\n");
 			}
 			writer.write(sbstr.toString());
